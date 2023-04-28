@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: white;
+    --black: black;
+    --main-color: rgb(42, 214, 177);
+    --main-color-dark: rgb(38, 189, 157);
+    --red: rgb(178, 0, 0);
+    --gray: rgb(172, 172, 172);
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color: aliceblue;
+    font-size: 20px;
+}
+/* ---------------GENERAL STYLES ---------------- */
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.align_center{
+    align-items: center;
+}
+
+.justfy_center{
+    display: flex;
+    justify-content: center;
+}
+
+button,
+input{
+    font-family: 'Mulish', sans-serif;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+section{
+    padding-top: 100px;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+}
+
+/* END OF GENERAL STYLES */
+/* ------------------------------------------------------------------------ */
+/* /////////////////////    HEADER STYLES       ////////////////////////////////////// */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 50px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    background: var(--white);
+}
+
+.logo{
+    font-size: 120%;
+    margin-left: 20px;
+    padding-top: 10px;
+    color: var(--main-color-dark);
+}
+.header_main_container{
+    gap: 30px;
+    padding-top: 15px;
+}
+.user_name{
+    margin-right: 30px;
+    padding-top: 14px;
+    font-weight: 600;
+    color: var(--main-color-dark);
+}
+.header_main_container i{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.header_main_container i:hover{
+    color: var(--main-color-dark);
+}
+
+
+/* ////////////////////            END OF HEADER STYLES   ////////////////////////////////////////// */
+
+/* ////////////////// home page styles /////////////////////// */
+.blog_container{
+    gap: 30px;
+}
+.blog_cards{
+    height: auto;
+    border-radius: 8px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    background-color: var(--white);
+    width: 800px;
+    padding: 20px;
+}
+
+.blog_date,
+.blog_title{
+    font-size: 80%;
+    color: var(--main-color-dark);
+    margin-bottom: 5px;
+}
+
+.blog_img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.icon_container{
+    display: flex;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.icon_container i{
+    font-size: 90%;
+    cursor: pointer;
+    color: var(--red);
+}
+.icon_container span{
+    color: var(--main-color);
+    font-size: 80%;
+    margin-top: -1px;
+    font-weight: 600;
+}
+
+
+
+.blog_paragraph{
+    font-size: 80%;
+    margin-top: 10px;
+    max-height: 63px;
+    overflow: hidden;
+}
+
+.read_more_btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--main-color);
+    font-size: 80%;
+    font-weight: 600;
+}
+
+.read_more_btn:hover{
+    color: var(--main-color-dark);
+}
+
+
+
+/* /////////////////////  PROFILE PAGE ////////////////////////////// */
+
+.profile_page_header{
+    background-color: var(--white);
+    height: 320px;
+    border-radius: 6px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.profile_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.profile_details{
+    margin-top: 30px;
+    margin-right: 10%;
+    gap: 20px;
+}
+
+.profile_details li{
+    font-size: 90%;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile_details li:hover{
+    color: var(--main-color-dark);
+}
+
+
+.edit_profile_form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    background-color: var(--white);
+    border-radius: 6px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    margin-top: 50px;
+    padding: 20px 20px;
+}
+
+.input_container label{
+    background-color: var(--gray);
+    border-radius: 6px 6px  0 0;
+    padding: 5px 10px;
+    color: var(--black);
+    font-size: 80%;
+}   
+.input_container input{
+    width: 100%;
+    outline: none;
+    border-radius: 0 6px 6px 6px;
+    border: 1px solid var(--gray);
+    height: 35px;
+    text-indent: 5px;
+}
+
+.input_container button{
+    width: 80px;
+    height: 35px;
+    background: var(--main-color);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 80%;
+    font-weight: 600;
+}
+.input_container button:hover{
+    background-color: var(--main-color-dark);
+}
+
+
+/* ////////////////// BLOG PAGE STYLES /////////// */
+
+.write_blog_container{
+    background-color: var(--white);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 6px;
+    padding: 20px;
+}
+.write_blog_container textarea{
+    width: 100%;
+    resize: none;
+    height: 200px;
+    border-radius: 6px;
+    padding-top: 5px;
+    padding-left: 20px;
+    outline: none;
+    border: 1px solid var(--gray);
+}
+
+.write_blog_container .blog_img{
+    margin-bottom: 20px;
+}
+.uploaded_img_as_blog{
+    display: none;
+}
+
+.save_blog_btn{
+    width: 80px;
+    height: 35px;
+    background: var(--main-color);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 80%;
+    font-weight: 600;
+}
+.save_blog_btn:hover{
+    background-color: var(--main-color-dark);
+}
+.upload_img_btn{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.upload_img_btn:hover{
+   color: var(--main-color-dark);
+}
+
+.blog_icon_container{
+    display: flex;
+    gap: 20px;
+  
+}
+
+.remove_img_btn{
+    color: var(--main-color);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.suggested_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 59px;
+}
+
+.suggested_container button{
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.suggested_container button:hover{
+    background: var(--main-color);
+   
+}
+.suggested_container button:hover path{ 
+    fill: white;
+}
+
+.suggested_body {
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding: 1px;
+}
+
+.suggested_card{
+    background-color: white;
+    min-width: 220px;
+    height: 250px;
+    box-shadow: 0 0 5px gray;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    border-radius: 6px;
+    transition: all .3s;
+}
+
+.suggested_card img{
+    width: 130px;
+    height: 130px;
+}
+
+.suggested_card a{
+    margin-top: 10px;
+    color: var(--main-color-dark);
+}
+
+
+.comment_container{
+    background-color: rgba(241, 241, 241);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.comment_inp_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.comment_inp_container input{
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: none;
+    outline: none;
+}
+
+.comment_inp_container button{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 19px;
+    color: var(--main-color-dark);
+}
+
+.comment_list{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.comment_list li div{
+    display: flex;
+    gap: 20px;
+}
+
+.comment_list li div h4{
+    font-size: 17px;
+    color: var(--main-color);
+}
+
+.comment_list li div span{
+    font-size: 16px;
+}
+.comment_list li p{
+    font-size: 17px;
+}
+
+
+.messages_page_container{
+    display: flex;
+    gap: 50px;
+    height: 70vh;
+}
+
+.messages_userList{
+    min-width: 270px;
+    background: white;
+    box-shadow: 0 0 5px gray;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.messages_userList ul {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.messages_userList ul li a{
+    color: var(--main-color-dark);
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.messages_box_container{
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.messages_box_header{
+    height: 40px;
+    padding: 10px;
+    border-bottom: 0.5px solid gray;
+}
+
+.messages_box_header a{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color-dark);
+}
+
+.messages_box_body{
+    display: flex;
+    flex-direction: column-reverse;
+    height: calc(70vh - 80px);
+    gap: 8px;
+    padding: 0 30px;
+}
+
+.messages_from_container{
+    display: flex;
+    justify-content: end;
+}
+
+.messages_to_container p,
+.messages_from_container p{
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    max-width: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 17px;
+}
+.messages_to_container p span,
+.messages_from_container p span{
+    font-size: 15px;
+}
+
+.messages_to_container{
+    display: flex;
+    justify-content: start;
+}
+
+.messages_box_footer{
+    border-top: 0.5px solid gray;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.messages_box_footer input{
+    width: 97%;
+    height: 30px;
+    border-radius: 60px;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: rgb(241, 241, 241);
+    text-indent: 4px;
+}
+
+.messages_box_footer button{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.log_out_btn{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--main-color);
+    margin-top: 10px;
+    margin-right: 20px;
+}

@@ -1,0 +1,1 @@
+export const main_api = ' https://blog.celtit.com/public/';
